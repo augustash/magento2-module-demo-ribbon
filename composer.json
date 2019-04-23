@@ -1,0 +1,29 @@
+{
+    "name": "augustash/module-demo-ribbon",
+    "description": "Display a pleasing demo notice.",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "proprietary"
+    ],
+    "authors": [
+        {
+            "name": "Pete McWilliams",
+            "email": "pmcwilliams@augustash.com"
+        }
+    ],
+    "config": {
+        "sort-packages": true
+    },
+    "require": {
+        "augustash/module-backend": ">=2.1"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Augustash\\DemoRibbon\\": ""
+        }
+    }
+}
