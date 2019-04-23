@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * August Ash Demo Ribbon
+ *
+ * @author    Peter McWilliams <pmcwilliams@augustash.com>
+ * @copyright 2019 August Ash, Inc.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <ash>
+            <general>
+                <ribbon_enabled>0</ribbon_enabled>
+                <ribbon_message>Demo - No Orders Honored</ribbon_message>
+                <ribbon_location>right</ribbon_location>
+            </general>
+        </ash>
+    </default>
+</config>

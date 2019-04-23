@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * August Ash Demo Ribbon
+ *
+ * @author    Peter McWilliams <pmcwilliams@augustash.com>
+ * @copyright 2019 August Ash, Inc.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Augustash\DemoRibbon\Api\ConfigInterface" type="Augustash\DemoRibbon\Model\Config"/>
+    <preference for="Magento\Theme\Block\Html\Notices" type="Augustash\DemoRibbon\Block\Html\Notices"/>
+    <preference for="Magento\Backend\Block\Page\Notices" type="Augustash\DemoRibbon\Block\Page\Notices"/>
+</config>
