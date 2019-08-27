@@ -16,7 +16,7 @@ Install the extension files directly into the project source:
 
 ```bash
 mkdir -p app/code/Augustash/DemoRibbon/
-git archive --format=tar --remote=git@github.com:augustash/magento2-module-demo-ribbon.git 1.0.0 | tar xf - -C app/code/Augustash/DemoRibbon/
+curl -Ss https://github.com/augustash/magento2-module-demo-ribbon/archive/1.1.0.tar.gz | tar xf - --strip 1 -C app/code/Augustash/DemoRibbon/
 bin/magento module:enable --clear-static-content Augustash_DemoRibbon
 bin/magento setup:upgrade
 bin/magento cache:flush
@@ -28,7 +28,7 @@ Install the extension using Composer using our development package repository:
 
 ```bash
 composer config repositories.augustash composer https://packages.augustash.com/repo/private
-composer require augustash/module-demo-ribbon:~1.0.0
+composer require augustash/module-demo-ribbon:~1.1.0
 bin/magento module:enable --clear-static-content Augustash_DemoRibbon
 bin/magento setup:upgrade
 bin/magento cache:flush
