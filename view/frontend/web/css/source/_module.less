@@ -94,20 +94,35 @@
     &.demo-ribbon {
 
       .ribbon {
-        top: 72px;
         width: 330px;
       }
-
-      .left {
+      
+      .left,
+      .top-left {
+        top: 72px;
         left: -70px;
         -webkit-transform: rotate(-45deg) translateY(0);
         transform: rotate(-45deg) translateY(0);
       }
 
-      .right {
+      .right,
+      .top-right {
+        top: 72px;
         right: -70px;
         -webkit-transform: rotate(45deg) translateY(0);
         transform: rotate(45deg) translateY(0);
+      }
+
+      .bottom-left {
+        bottom: 0;
+        left: -70px;
+        transform: rotate(45deg) translateY(0);
+      }
+
+      .bottom-right {
+        bottom: 0;
+        right: -70px;
+        transform: rotate(-45deg) translateY(0);
       }
     }
   }

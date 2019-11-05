@@ -14,6 +14,7 @@
                 <ribbon_enabled>0</ribbon_enabled>
                 <ribbon_message>Demo - No Orders Honored</ribbon_message>
                 <ribbon_location>right</ribbon_location>
+                <ribbon_size>large</ribbon_size>
             </general>
         </ash>
     </default>

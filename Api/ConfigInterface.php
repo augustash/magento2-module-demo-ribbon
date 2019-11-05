@@ -22,6 +22,7 @@ interface ConfigInterface
      */
     const XML_PATH_RIBBON_ENABLED = 'ash/general/ribbon_enabled';
     const XML_PATH_RIBBON_LOCATION = 'ash/general/ribbon_location';
+    const XML_PATH_RIBBON_SIZE = 'ash/general/ribbon_size';
     const XML_PATH_RIBBON_MESSAGE = 'ash/general/ribbon_message';
 
     /**
@@ -41,6 +42,15 @@ interface ConfigInterface
      * @return string
      */
     public function getLocation($scope = ScopeConfigInterface::SCOPE_TYPE_DEFAULT, $scopeCode = null);
+
+    /**
+     * Returns the configured ribbon size.
+     *
+     * @param string $scope
+     * @param null|string|\Magento\Store\Model\Store $scopeCode
+     * @return string
+     */
+    public function getSize($scope = ScopeConfigInterface::SCOPE_TYPE_DEFAULT, $scopeCode = null);
 
     /**
      * Returns the configured ribbon message.

@@ -13,7 +13,7 @@ use Magento\Framework\Option\ArrayInterface;
  * Location config source class.
  * @api
  */
-class Location implements ArrayInterface
+class Size implements ArrayInterface
 {
     /**
      * Options getter.
@@ -23,10 +23,8 @@ class Location implements ArrayInterface
     public function toOptionArray()
     {
         return [
-            ['value' => 'left', 'label' => __('Top Left')],
-            ['value' => 'right', 'label' => __('Top Right')],
-            ['value' => 'bottom-left', 'label' => __('Bottom Left')],
-            ['value' => 'bottom-right', 'label' => __('Bottom Right')],
+            ['value' => 'small', 'label' => __('Small')],
+            ['value' => 'large', 'label' => __('Large')],
         ];
     }
 
@@ -38,10 +36,8 @@ class Location implements ArrayInterface
     public function toArray()
     {
         return [
-            'left' => __('Left'),
-            'right' => __('Right'),
-            'bottom-left' => __('Bottom Left'),
-            'bottom-right' => __('Bottom Right'),
+            'small' => __('Small'),
+            'large' => __('Large'),
         ];
     }
 }
