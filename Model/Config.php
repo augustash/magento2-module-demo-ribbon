@@ -62,6 +62,18 @@ class Config implements ConfigInterface
     /**
      * {@inheritdoc}
      */
+    public function getSize($scope = ScopeConfigInterface::SCOPE_TYPE_DEFAULT, $scopeCode = null)
+    {
+        return $this->scopeConfig->getValue(
+            self::XML_PATH_RIBBON_SIZE,
+            $scope,
+            $scopeCode
+        );
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getMessage($scope = ScopeConfigInterface::SCOPE_TYPE_DEFAULT, $scopeCode = null)
     {
         return $this->scopeConfig->getValue(

@@ -94,20 +94,60 @@
     &.demo-ribbon {
 
       .ribbon {
-        top: 72px;
         width: 330px;
       }
-
-      .left {
+      
+      .left,
+      .top-left {
+        top: 72px;
         left: -70px;
         -webkit-transform: rotate(-45deg) translateY(0);
         transform: rotate(-45deg) translateY(0);
+
+        &.small {
+          top: 40px;
+          width: 260px;
+          font-size: 1.125rem;
+        }
       }
 
-      .right {
+      .right,
+      .top-right {
+        top: 72px;
         right: -70px;
         -webkit-transform: rotate(45deg) translateY(0);
         transform: rotate(45deg) translateY(0);
+
+        &.small {
+          top: 40px;
+          width: 260px;
+          font-size: 1.125rem;
+
+        }
+      }
+
+      .bottom-left {
+        bottom: 72px;
+        left: -70px;
+        transform: rotate(45deg) translateY(0);
+
+        &.small {
+          bottom: 40px;
+          width: 260px;
+          font-size: 1.125rem;
+        }
+      }
+
+      .bottom-right {
+        bottom: 72px;
+        right: -70px;
+        transform: rotate(-45deg) translateY(0);
+
+        &.small {
+          bottom: 40px;
+          width: 260px;
+          font-size: 1.125rem;
+        }
       }
     }
   }

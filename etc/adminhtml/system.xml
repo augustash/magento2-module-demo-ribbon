@@ -31,6 +31,14 @@
                         <field id="ribbon_enabled">1</field>
                     </depends>
                 </field>
+                <field id="ribbon_size" translate="label comment" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Demo Notice Size</label>
+                    <source_model>Augustash\DemoRibbon\Model\Config\Source\Size</source_model>
+                    <comment><![CDATA[Choose the size of the notice ribbon.]]></comment>
+                    <depends>
+                        <field id="ribbon_enabled">1</field>
+                    </depends>
+                </field>
             </group>
         </section>
     </system>

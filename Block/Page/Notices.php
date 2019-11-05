@@ -67,4 +67,14 @@ class Notices extends ParentBlock
     {
         return $this->config->getLocation();
     }
+
+    /**
+     * Get demo ribbon size.
+     *
+     * @return string
+     */
+    public function getDemoSize()
+    {
+        return $this->config->getSize();
+    }
 }

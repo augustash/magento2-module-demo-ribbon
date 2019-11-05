@@ -50,6 +50,6 @@
 <?php endif; ?>
 <?php if ($block->displayDemoNotice()): ?>
     <div class="message global demo-ribbon">
-        <a href="/" class='ribbon <?= $block->getDemoLocation() ?>'><?= $block->escapeHtml($block->getDemoMessage()) ?></a>
+        <a href="/" class='ribbon <?= $block->getDemoLocation() ?> <?= $block->getDemoSize() ?>'><?= $block->escapeHtml($block->getDemoMessage()) ?></a>
     </div>
 <?php endif; ?>
