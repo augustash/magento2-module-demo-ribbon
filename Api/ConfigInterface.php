@@ -4,7 +4,7 @@
  * August Ash Demo Ribbon
  *
  * @author    Peter McWilliams <pmcwilliams@augustash.com>
- * @copyright 2019 August Ash, Inc.
+ * @copyright Copyright (c) 2020 August Ash (https://www.augustash.com)
  */
 
 namespace Augustash\DemoRibbon\Api;
@@ -31,7 +31,10 @@ interface ConfigInterface
      * @param null|string|\Magento\Store\Model\Store $scopeCode
      * @return bool
      */
-    public function isEnabled($scope = ScopeConfigInterface::SCOPE_TYPE_DEFAULT, $scopeCode = null);
+    public function isEnabled(
+        $scope = ScopeConfigInterface::SCOPE_TYPE_DEFAULT,
+        $scopeCode = null
+    ): bool;
 
     /**
      * Returns the configured ribbon location.
@@ -40,7 +43,10 @@ interface ConfigInterface
      * @param null|string|\Magento\Store\Model\Store $scopeCode
      * @return string
      */
-    public function getLocation($scope = ScopeConfigInterface::SCOPE_TYPE_DEFAULT, $scopeCode = null);
+    public function getLocation(
+        $scope = ScopeConfigInterface::SCOPE_TYPE_DEFAULT,
+        $scopeCode = null
+    ): string;
 
     /**
      * Returns the configured ribbon message.
@@ -49,5 +55,8 @@ interface ConfigInterface
      * @param null|string|\Magento\Store\Model\Store $scopeCode
      * @return string
      */
-    public function getMessage($scope = ScopeConfigInterface::SCOPE_TYPE_DEFAULT, $scopeCode = null);
+    public function getMessage(
+        $scope = ScopeConfigInterface::SCOPE_TYPE_DEFAULT,
+        $scopeCode = null
+    ): string;
 }

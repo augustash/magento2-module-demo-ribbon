@@ -1,10 +1,12 @@
 <?php
+
 /**
  * August Ash Demo Ribbon
  *
  * @author    Peter McWilliams <pmcwilliams@augustash.com>
- * @copyright 2019 August Ash, Inc.
+ * @copyright Copyright (c) 2020 August Ash (https://www.augustash.com)
  */
+
 namespace Augustash\DemoRibbon\Model\Config\Source;
 
 use Magento\Framework\Option\ArrayInterface;
@@ -20,7 +22,7 @@ class Location implements ArrayInterface
      *
      * @return array
      */
-    public function toOptionArray()
+    public function toOptionArray(): array
     {
         return [
             ['value' => 'left', 'label' => __('Left')],
@@ -33,7 +35,7 @@ class Location implements ArrayInterface
      *
      * @return array
      */
-    public function toArray()
+    public function toArray(): array
     {
         return [
             'left' => __('Left'),
