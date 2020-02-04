@@ -1,10 +1,12 @@
 <?php
+
 /**
  * August Ash Demo Ribbon
  *
  * @author    Peter McWilliams <pmcwilliams@augustash.com>
- * @copyright 2019 August Ash, Inc.
+ * @copyright Copyright (c) 2020 August Ash (https://www.augustash.com)
  */
+
 namespace Augustash\DemoRibbon\Model\Config\Source;
 
 use Magento\Framework\Option\ArrayInterface;

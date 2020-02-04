@@ -1,9 +1,10 @@
 <?php
+
 /**
  * August Ash Demo Ribbon
  *
  * @author    Peter McWilliams <pmcwilliams@augustash.com>
- * @copyright 2019 August Ash, Inc.
+ * @copyright Copyright (c) 2020 August Ash (https://www.augustash.com)
  */
 
 \Magento\Framework\Component\ComponentRegistrar::register(
