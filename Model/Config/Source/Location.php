@@ -22,7 +22,7 @@ class Location implements ArrayInterface
      *
      * @return array
      */
-    public function toOptionArray()
+    public function toOptionArray(): array
     {
         return [
             ['value' => 'left', 'label' => __('Left')],
@@ -35,7 +35,7 @@ class Location implements ArrayInterface
      *
      * @return array
      */
-    public function toArray()
+    public function toArray(): array
     {
         return [
             'left' => __('Left'),

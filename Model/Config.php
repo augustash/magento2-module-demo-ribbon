@@ -4,13 +4,13 @@
  * August Ash Demo Ribbon
  *
  * @author    Peter McWilliams <pmcwilliams@augustash.com>
- * @copyright 2019 August Ash, Inc.
+ * @copyright Copyright (c) 2020 August Ash (https://www.augustash.com)
  */
 
 namespace Augustash\DemoRibbon\Model;
 
 use Augustash\DemoRibbon\Api\ConfigInterface;
-use Magento\Framework\App\Config\ScopeConfigInterface;
+use Magento\Store\Model\ScopeInterface;
 
 /**
  * Configuration class.
@@ -38,8 +38,10 @@ class Config implements ConfigInterface
     /**
      * {@inheritdoc}
      */
-    public function isEnabled($scope = ScopeConfigInterface::SCOPE_TYPE_DEFAULT, $scopeCode = null)
-    {
+    public function isEnabled(
+        $scope = ScopeInterface::SCOPE_STORE,
+        $scopeCode = null
+    ): bool {
         return (bool) $this->scopeConfig->getValue(
             self::XML_PATH_RIBBON_ENABLED,
             $scope,
@@ -50,8 +52,10 @@ class Config implements ConfigInterface
     /**
      * {@inheritdoc}
      */
-    public function getLocation($scope = ScopeConfigInterface::SCOPE_TYPE_DEFAULT, $scopeCode = null)
-    {
+    public function getLocation(
+        $scope = ScopeInterface::SCOPE_STORE,
+        $scopeCode = null
+    ): string {
         return $this->scopeConfig->getValue(
             self::XML_PATH_RIBBON_LOCATION,
             $scope,
@@ -62,8 +66,10 @@ class Config implements ConfigInterface
     /**
      * {@inheritdoc}
      */
-    public function getMessage($scope = ScopeConfigInterface::SCOPE_TYPE_DEFAULT, $scopeCode = null)
-    {
+    public function getMessage(
+        $scope = ScopeInterface::SCOPE_STORE,
+        $scopeCode = null
+    ): string {
         return $this->scopeConfig->getValue(
             self::XML_PATH_RIBBON_MESSAGE,
             $scope,
