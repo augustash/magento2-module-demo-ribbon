@@ -32,7 +32,10 @@ interface ConfigInterface
      * @param null|string|\Magento\Store\Model\Store $scopeCode
      * @return bool
      */
-    public function isEnabled($scope = ScopeConfigInterface::SCOPE_TYPE_DEFAULT, $scopeCode = null);
+    public function isEnabled(
+        $scope = ScopeConfigInterface::SCOPE_TYPE_DEFAULT,
+        $scopeCode = null
+    ): bool;
 
     /**
      * Returns the configured ribbon location.
@@ -41,7 +44,10 @@ interface ConfigInterface
      * @param null|string|\Magento\Store\Model\Store $scopeCode
      * @return string
      */
-    public function getLocation($scope = ScopeConfigInterface::SCOPE_TYPE_DEFAULT, $scopeCode = null);
+    public function getLocation(
+        $scope = ScopeConfigInterface::SCOPE_TYPE_DEFAULT,
+        $scopeCode = null
+    ): string;
 
     /**
      * Returns the configured ribbon size.
@@ -50,7 +56,10 @@ interface ConfigInterface
      * @param null|string|\Magento\Store\Model\Store $scopeCode
      * @return string
      */
-    public function getSize($scope = ScopeConfigInterface::SCOPE_TYPE_DEFAULT, $scopeCode = null);
+    public function getSize(
+        $scope = ScopeConfigInterface::SCOPE_TYPE_DEFAULT,
+        $scopeCode = null
+    ): string;
 
     /**
      * Returns the configured ribbon message.
@@ -59,5 +68,8 @@ interface ConfigInterface
      * @param null|string|\Magento\Store\Model\Store $scopeCode
      * @return string
      */
-    public function getMessage($scope = ScopeConfigInterface::SCOPE_TYPE_DEFAULT, $scopeCode = null);
+    public function getMessage(
+        $scope = ScopeConfigInterface::SCOPE_TYPE_DEFAULT,
+        $scopeCode = null
+    ): string;
 }
