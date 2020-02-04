@@ -10,6 +10,7 @@
 namespace Augustash\DemoRibbon\Model;
 
 use Augustash\DemoRibbon\Api\ConfigInterface;
+use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Store\Model\ScopeInterface;
 
 /**
