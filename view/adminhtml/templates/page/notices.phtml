@@ -9,9 +9,8 @@
 
 ?>
 <?php
-/**
- * @var \Augustash\DemoRibbon\Block\Page\Notices $block
- */
+/** @var \Augustash\DemoRibbon\Block\Page\Notices $block */
+/** @var \Magento\Framework\Escaper $escaper */
 ?>
 <?php if ($block->displayNoscriptNotice()) : ?>
     <noscript>
@@ -26,7 +25,7 @@
 <?php if ($block->displayDemoNotice()) : ?>
     <div class="messages">
         <div class="message message-warning message-demo-mode">
-            <?= $block->escapeHtml($block->getDemoMessage()) ?> -
+            <?= $escaper->escapeHtml($block->getDemoMessage()) ?> -
             <?= /* @escapeNotVerified */ __('You can browse and place orders, but nothing will be honored.') ?>
         </div>
     </div>
