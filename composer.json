@@ -2,7 +2,7 @@
     "name": "augustash/module-demo-ribbon",
     "description": "Display a pleasing demo notice.",
     "type": "magento2-module",
-    "version": "1.2.2",
+    "version": "2.0.0",
     "license": [
         "proprietary"
     ],
@@ -16,7 +16,8 @@
         "sort-packages": true
     },
     "require": {
-        "augustash/module-backend": ">=2.1"
+        "augustash/module-backend": ">=2.1",
+        "magento/framework": ">=103.0"
     },
     "autoload": {
         "files": [

@@ -9,9 +9,8 @@
 
 ?>
 <?php
-/**
- * @var \Augustash\DemoRibbon\Block\Html\Notices $block
- */
+/** @var \Augustash\DemoRibbon\Block\Html\Notices $block */
+/** @var \Magento\Framework\Escaper $escaper */
 ?>
 <?php if ($block->displayNoscriptNotice()) : ?>
     <noscript>
@@ -52,6 +51,6 @@
 <?php endif; ?>
 <?php if ($block->displayDemoNotice()) : ?>
     <div class="message global demo-ribbon">
-        <a href="/" class='ribbon <?= $block->getDemoLocation() ?> <?= $block->getDemoSize() ?>'><?= $block->escapeHtml($block->getDemoMessage()) ?></a>
+        <a href="/" class='ribbon <?= $block->getDemoLocation() ?> <?= $block->getDemoSize() ?>'><?= $escaper->escapeHtml($block->getDemoMessage()) ?></a>
     </div>
 <?php endif; ?>
