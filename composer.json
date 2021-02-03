@@ -16,7 +16,8 @@
         "sort-packages": true
     },
     "require": {
-        "augustash/module-backend": ">=2.1"
+        "augustash/module-backend": ">=2.1",
+        "magento/framework": ">=103.0"
     },
     "autoload": {
         "files": [
