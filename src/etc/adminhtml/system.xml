@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * August Ash Demo Ribbon
+ *
+ * @author    Peter McWilliams <pmcwilliams@augustash.com>
+ * @copyright Copyright (c) 2022 August Ash (https://www.augustash.com)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="ash">
+            <group id="general">
+                <field id="ribbon_enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Demo Notice Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="ribbon_message" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Demo Notice Message</label>
+                    <comment><![CDATA[Short message displayed on the frontend notice ribbon (26 characters max).]]></comment>
+                    <validate>validate-length maximum-length-26</validate>
+                    <depends>
+                        <field id="ribbon_enabled">1</field>
+                    </depends>
+                </field>
+                <field id="ribbon_location" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Demo Notice Location</label>
+                    <source_model>Augustash\DemoRibbon\Model\Config\Source\Location</source_model>
+                    <comment><![CDATA[Choose which side of the frontend website to display the notice ribbon.]]></comment>
+                    <depends>
+                        <field id="ribbon_enabled">1</field>
+                    </depends>
+                </field>
+                <field id="ribbon_size" translate="label comment" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Demo Notice Size</label>
+                    <source_model>Augustash\DemoRibbon\Model\Config\Source\Size</source_model>
+                    <comment><![CDATA[Choose the size of the notice ribbon.]]></comment>
+                    <depends>
+                        <field id="ribbon_enabled">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
