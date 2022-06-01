@@ -16,7 +16,7 @@ Install the extension using Composer using our development package repository:
 
 ```bash
 composer config repositories.augustash composer https://packages.augustash.com/repo/private
-composer require augustash/module-demo-ribbon:~2.0.1
+composer require augustash/module-demo-ribbon:~2.0.2
 bin/magento module:enable --clear-static-content Augustash_DemoRibbon
 bin/magento setup:upgrade
 bin/magento cache:flush
