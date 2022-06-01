@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * August Ash Demo Ribbon
+ *
+ * @author    Peter McWilliams <pmcwilliams@augustash.com>
+ * @copyright Copyright (c) 2022 August Ash (https://www.augustash.com)
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="global.notices">
+            <referenceBlock name="global_notices" template="Augustash_DemoRibbon::page/notices.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

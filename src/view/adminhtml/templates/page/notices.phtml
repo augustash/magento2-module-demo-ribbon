@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * August Ash Demo Ribbon
+ *
+ * @author    Peter McWilliams <pmcwilliams@augustash.com>
+ * @copyright Copyright (c) 2022 August Ash (https://www.augustash.com)
+ */
+
+?>
+<?php
+/** @var \Augustash\DemoRibbon\Block\Page\Notices $block */
+/** @var \Magento\Framework\Escaper $escaper */
+?>
+<?php if ($block->displayNoscriptNotice()): ?>
+    <noscript>
+        <div class="messages">
+            <div class="message message-warning message-noscript">
+                <strong><?= $escaper->escapeHtml(__('JavaScript may be disabled in your browser.')) ?></strong>
+                <?= $escaper->escapeHtml(__('To use this website you must first enable JavaScript in your browser.')) ?>
+            </div>
+        </div>
+    </noscript>
+<?php endif; ?>
+<?php if ($block->displayDemoNotice()): ?>
+    <div class="messages">
+        <div class="message message-warning message-demo-mode">
+            <?= $escaper->escapeHtml($block->getDemoMessage()) ?> -
+            <?= $escaper->escapeHtml(__('You can browse and place orders, but nothing will be honored.')) ?>
+        </div>
+    </div>
+<?php endif; ?>
