@@ -1,0 +1,28 @@
+/**
+ * August Ash Demo Ribbon
+ *
+ * @author    Peter McWilliams <pmcwilliams@augustash.com>
+ * @copyright Copyright (c) 2022 August Ash (https://www.augustash.com)
+ */
+
+//
+//  Demo ribbon notice
+//  ---------------------------------------------
+
+.message-note {
+    &:before {
+        color: @alert-icon__notice__color;
+        content: @alert-icon__notice__content;
+    }
+
+    background: #DEEBFF;
+}
+
+.message-disclaimer {
+    &:before {
+        color: #5243AA;
+        content: @alert-icon__notice__content;
+    }
+
+    background: #EAE6FF;
+}
