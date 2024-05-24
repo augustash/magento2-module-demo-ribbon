@@ -1,27 +1,22 @@
 <?php
 
 /**
- * August Ash Demo Ribbon
+ * August Ash Demo Ribbon Module
  *
- * @author    Peter McWilliams <pmcwilliams@augustash.com>
- * @copyright Copyright (c) 2022 August Ash (https://www.augustash.com)
+ * @author Peter McWilliams <pmcwilliams@augustash.com>
+ * @license MIT
  */
+
+declare(strict_types=1);
 
 namespace Augustash\DemoRibbon\Model;
 
 use Augustash\DemoRibbon\Api\ConfigInterface;
 use Magento\Framework\App\Config\ScopeConfigInterface;
+use Magento\Store\Model\ScopeInterface;
 
-/**
- * Configuration class.
- */
 class Config implements ConfigInterface
 {
-    /**
-     * @var \Magento\Framework\App\Config\ScopeConfigInterface
-     */
-    protected $scopeConfig;
-
     /**
      * Constructor.
      *
@@ -30,80 +25,79 @@ class Config implements ConfigInterface
      * @param \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig
      */
     public function __construct(
-        ScopeConfigInterface $scopeConfig
+        protected ScopeConfigInterface $scopeConfig,
     ) {
-        $this->scopeConfig = $scopeConfig;
     }
 
     /**
-     * Returns the module's enabled status.
+     * Returns the module's configured status.
      *
      * @param string $scope
-     * @param null|int|string $scopeCode
+     * @param string|int|null $scopeCode
      * @return bool
      */
     public function isEnabled(
-        string $scope = ScopeConfigInterface::SCOPE_TYPE_DEFAULT,
-        $scopeCode = null
+        string $scope = ScopeInterface::SCOPE_STORES,
+        string|int|null $scopeCode = null,
     ): bool {
         return (bool) $this->scopeConfig->getValue(
             self::XML_PATH_RIBBON_ENABLED,
             $scope,
-            $scopeCode
+            $scopeCode,
         );
     }
 
     /**
-     * Returns the configured ribbon location.
+     * Returns the module's configured ribbon location.
      *
      * @param string $scope
-     * @param null|int|string $scopeCode
+     * @param string|int|null $scopeCode
      * @return string
      */
     public function getLocation(
-        string $scope = ScopeConfigInterface::SCOPE_TYPE_DEFAULT,
-        $scopeCode = null
+        string $scope = ScopeInterface::SCOPE_STORES,
+        string|int|null $scopeCode = null,
     ): string {
         return (string) $this->scopeConfig->getValue(
             self::XML_PATH_RIBBON_LOCATION,
             $scope,
-            $scopeCode
+            $scopeCode,
         );
     }
 
     /**
-     * Returns the configured ribbon size.
+     * Returns the module's configured ribbon message.
      *
      * @param string $scope
-     * @param null|int|string $scopeCode
+     * @param string|int|null $scopeCode
+     * @return string|null
+     */
+    public function getMessage(
+        string $scope = ScopeInterface::SCOPE_STORES,
+        string|int|null $scopeCode = null,
+    ): ?string {
+        return $this->scopeConfig->getValue(
+            self::XML_PATH_RIBBON_MESSAGE,
+            $scope,
+            $scopeCode,
+        );
+    }
+
+    /**
+     * Returns the module's configured ribbon size.
+     *
+     * @param string $scope
+     * @param string|int|null $scopeCode
      * @return string
      */
     public function getSize(
-        string $scope = ScopeConfigInterface::SCOPE_TYPE_DEFAULT,
-        $scopeCode = null
+        string $scope = ScopeInterface::SCOPE_STORES,
+        string|int|null $scopeCode = null,
     ): string {
         return (string) $this->scopeConfig->getValue(
             self::XML_PATH_RIBBON_SIZE,
             $scope,
-            $scopeCode
-        );
-    }
-
-    /**
-     * Returns the configured ribbon message.
-     *
-     * @param string $scope
-     * @param null|int|string $scopeCode
-     * @return string
-     */
-    public function getMessage(
-        string $scope = ScopeConfigInterface::SCOPE_TYPE_DEFAULT,
-        $scopeCode = null
-    ): string {
-        return (string) $this->scopeConfig->getValue(
-            self::XML_PATH_RIBBON_MESSAGE,
-            $scope,
-            $scopeCode
+            $scopeCode,
         );
     }
 }

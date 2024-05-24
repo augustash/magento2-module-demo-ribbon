@@ -1,8 +1,8 @@
 /**
- * August Ash Demo Ribbon
+ * August Ash Demo Ribbon Module
  *
- * @author    Peter McWilliams <pmcwilliams@augustash.com>
- * @copyright Copyright (c) 2022 August Ash (https://www.augustash.com)
+ * @author Peter McWilliams <pmcwilliams@augustash.com>
+ * @license MIT
  */
 
 //
@@ -20,41 +20,41 @@
             text-align: center;
 
             .ribbon {
-                display: block;
-                position: fixed;
-                z-index: 901;
-                background-size: 100% auto;
-                cursor: pointer;
+                -webkit-transition: background-color 0.2s ease-out, -webkit-transform 0.45s cubic-bezier(0.15, 0, 0, 1), opacity 0.2s ease-out;
                 background-color: #763053;
+                background-size: 100% auto;
+                box-shadow: -2px 3px 1px rgba(0, 0, 0, 0.23);
                 color: #f0f0f0;
-                padding: 1em 0 0.95em;
-                line-height: 1.04em;
-                text-decoration: none;
+                cursor: pointer;
+                display: block;
                 font-family: Montserrat;
                 font-size: 1.04em;
-                box-shadow: -2px 3px 1px rgba(0, 0, 0, 0.23);
+                line-height: 1.04em;
                 opacity: 1;
+                padding: 1em 0 0.95em;
+                position: fixed;
+                text-decoration: none;
                 text-transform: uppercase;
-                -webkit-transition: background-color 0.2s ease-out, -webkit-transform 0.45s cubic-bezier(0.15, 0, 0, 1), opacity 0.2s ease-out;
                 transition: background-color 0.2s ease-out, transform 0.45s cubic-bezier(0.15, 0, 0, 1), opacity 0.2s ease-out;
+                z-index: 901;
             }
 
             .ribbon:hover {
                 background-color: #834464;
-                color: #FFF
+                color: #fff;
             }
 
             .ribbon:before,
             .ribbon:after {
-                content: " ";
-                position: absolute;
-                left: 0;
                 background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIzMnB4IiBoZWlnaHQ9IjJweCIgdmlld0JveD0iMCAwIDMyIDIiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDMyIDIiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxyZWN0IGZpbGw9IiNGNEY0RjQiIHdpZHRoPSI0IiBoZWlnaHQ9IjIiLz48cmVjdCB4PSI4IiBmaWxsPSIjRjRGNEY0IiB3aWR0aD0iNCIgaGVpZ2h0PSIyIi8+PHJlY3QgeD0iMTYiIGZpbGw9IiNGNEY0RjQiIHdpZHRoPSI0IiBoZWlnaHQ9IjIiLz48cmVjdCB4PSIyNCIgZmlsbD0iI0Y0RjRGNCIgd2lkdGg9IjQiIGhlaWdodD0iMiIvPjwvc3ZnPg==);
-                background-repeat: repeat-x;
                 background-position: top left;
-                z-index: 1;
-                width: 100%;
+                background-repeat: repeat-x;
+                content: ' ';
                 height: 1px;
+                left: 0;
+                position: absolute;
+                width: 100%;
+                z-index: 1;
             }
 
             .ribbon:before {
@@ -99,30 +99,29 @@
 
             .left,
             .top-left {
-                top: 72px;
-                left: -70px;
                 -webkit-transform: rotate(-45deg) translateY(0);
+                left: -70px;
+                top: 72px;
                 transform: rotate(-45deg) translateY(0);
 
                 &.small {
+                    font-size: 1.125rem;
                     top: 40px;
                     width: 260px;
-                    font-size: 1.125rem;
                 }
             }
 
             .right,
             .top-right {
-                top: 72px;
-                right: -70px;
                 -webkit-transform: rotate(45deg) translateY(0);
+                right: -70px;
+                top: 72px;
                 transform: rotate(45deg) translateY(0);
 
                 &.small {
+                    font-size: 1.125rem;
                     top: 40px;
                     width: 260px;
-                    font-size: 1.125rem;
-
                 }
             }
 
@@ -133,8 +132,8 @@
 
                 &.small {
                     bottom: 40px;
-                    width: 260px;
                     font-size: 1.125rem;
+                    width: 260px;
                 }
             }
 
@@ -145,8 +144,8 @@
 
                 &.small {
                     bottom: 40px;
-                    width: 260px;
                     font-size: 1.125rem;
+                    width: 260px;
                 }
             }
         }

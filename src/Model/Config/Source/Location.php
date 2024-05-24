@@ -1,49 +1,47 @@
 <?php
 
 /**
- * August Ash Demo Ribbon
+ * August Ash Demo Ribbon Module
  *
- * @author    Peter McWilliams <pmcwilliams@augustash.com>
- * @copyright Copyright (c) 2022 August Ash (https://www.augustash.com)
+ * @author Peter McWilliams <pmcwilliams@augustash.com>
+ * @license MIT
  */
+
+declare(strict_types=1);
 
 namespace Augustash\DemoRibbon\Model\Config\Source;
 
 use Magento\Framework\Data\OptionSourceInterface;
 
-/**
- * Location config source class.
- * @api
- */
 class Location implements OptionSourceInterface
 {
     /**
      * Return array of options as value-label pairs.
      *
-     * @return array
+     * @return mixed[]
      */
     public function toOptionArray(): array
     {
         return [
-            ['value' => 'left', 'label' => __('Top Left')],
-            ['value' => 'right', 'label' => __('Top Right')],
             ['value' => 'bottom-left', 'label' => __('Bottom Left')],
             ['value' => 'bottom-right', 'label' => __('Bottom Right')],
+            ['value' => 'left', 'label' => __('Top Left')],
+            ['value' => 'right', 'label' => __('Top Right')],
         ];
     }
 
     /**
      * Get options in "key-value" format.
      *
-     * @return array
+     * @return mixed[]
      */
     public function toArray(): array
     {
         return [
-            'left' => __('Left'),
-            'right' => __('Right'),
             'bottom-left' => __('Bottom Left'),
             'bottom-right' => __('Bottom Right'),
+            'left' => __('Left'),
+            'right' => __('Right'),
         ];
     }
 }
