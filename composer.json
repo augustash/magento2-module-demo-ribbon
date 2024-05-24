@@ -1,23 +1,31 @@
 {
     "name": "augustash/module-demo-ribbon",
-    "description": "Display a pleasing demo notice.",
+    "description": "Magento 2 module to display a pleasing demo notice.",
     "license": [
-        "proprietary"
+        "MIT"
     ],
     "type": "magento2-module",
-    "version": "2.0.2",
-    "authors": [
+    "homepage": "https://github.com/augustash/magento2-module-demo-ribbon",
+    "require": {
+        "php": ">= 8.1",
+        "augustash/module-admin": "^1.0.0",
+        "magento/framework": ">= 103.0.0",
+        "magento/module-config": "@stable",
+        "magento/module-store": "@stable"
+    },
+    "require-dev": {
+        "augustash/magento2-quality-suite": "^1.0"
+    },
+    "repositories": [
         {
-            "name": "Pete McWilliams",
-            "email": "pmcwilliams@augustash.com"
+            "type": "composer",
+            "url": "https://repo.magento.com/"
+        },
+        {
+            "type": "composer",
+            "url": "https://repo.packagist.com/augustash/magento/"
         }
     ],
-    "require": {
-        "augustash/module-backend": ">= 2.1",
-        "magento/framework": ">= 103.0.0",
-        "magento/module-backend": "*",
-        "magento/module-theme": "*"
-    },
     "autoload": {
         "psr-4": {
             "Augustash\\DemoRibbon\\": "src/"
@@ -27,6 +35,26 @@
         ]
     },
     "config": {
+        "allow-plugins": {
+            "magento/composer-dependency-version-audit-plugin": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        },
         "sort-packages": true
+    },
+    "scripts": {
+        "test:all": [
+            "@test:lint",
+            "@test:mess",
+            "@test:stan",
+            "@test:style"
+        ],
+        "test:lint": "vendor/bin/parallel-lint --exclude vendor src/",
+        "test:mess": "vendor/bin/phpmd src/ text phpmd.xml.dist",
+        "test:stan": "vendor/bin/phpstan analyze --no-interaction --no-progress",
+        "test:static-analysis": [
+            "@test:lint",
+            "@test:stan"
+        ],
+        "test:style": "vendor/bin/phpcs -s src/"
     }
 }

@@ -17,13 +17,18 @@ use Magento\Framework\View\Element\Template;
 /** @var Escaper $escaper */
 /** @var RibbonNotice $viewModel */
 
-$viewModel = $block->getData('viewModel');
+$viewModel = $block->getData('view_model');
+$classes = \sprintf(
+    '%s %s',
+    $viewModel->getDemoLocation(),
+    $viewModel->getDemoSize(),
+);
 ?>
 <?php if ($viewModel->displayDemoNotice()): ?>
-    <div class="messages">
-        <div class="message message-note message-demo-mode">
-            <?= $escaper->escapeHtml($viewModel->getDemoMessage()) ?> -
-            <?= $escaper->escapeHtml(__('You can browse and place orders, but nothing will be honored.')) ?>
-        </div>
+    <div class="message global demo-ribbon">
+        <a href="/"
+           class='ribbon <?= $escaper->escapeHtmlAttr($classes) ?>'>
+           <?= $escaper->escapeHtml($viewModel->getDemoMessage()) ?>
+        </a>
     </div>
 <?php endif; ?>

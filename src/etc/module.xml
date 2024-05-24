@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <!--
 /**
- * August Ash Demo Ribbon
+ * August Ash Demo Ribbon Module
  *
- * @author    Peter McWilliams <pmcwilliams@augustash.com>
- * @copyright Copyright (c) 2022 August Ash (https://www.augustash.com)
+ * @author Peter McWilliams <pmcwilliams@augustash.com>
+ * @license MIT
  */
- -->
+-->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
     <module name="Augustash_DemoRibbon">
         <sequence>
-            <module name="Augustash_Backend"/>
-            <module name="Magento_Backend"/>
-            <module name="Magento_Theme"/>
+            <module name="Augustash_Admin"/>
+            <module name="Magento_Config"/>
+            <module name="Magento_Store"/>
         </sequence>
     </module>
 </config>
