@@ -1,45 +1,43 @@
 <?php
 
 /**
- * August Ash Demo Ribbon
+ * August Ash Demo Ribbon Module
  *
- * @author    Peter McWilliams <pmcwilliams@augustash.com>
- * @copyright Copyright (c) 2022 August Ash (https://www.augustash.com)
+ * @author Peter McWilliams <pmcwilliams@augustash.com>
+ * @license MIT
  */
+
+declare(strict_types=1);
 
 namespace Augustash\DemoRibbon\Model\Config\Source;
 
 use Magento\Framework\Data\OptionSourceInterface;
 
-/**
- * Location config source class.
- * @api
- */
 class Size implements OptionSourceInterface
 {
     /**
      * Return array of options as value-label pairs.
      *
-     * @return array
+     * @return mixed[]
      */
-    public function toOptionArray()
+    public function toOptionArray(): array
     {
         return [
-            ['value' => 'small', 'label' => __('Small')],
             ['value' => 'large', 'label' => __('Large')],
+            ['value' => 'small', 'label' => __('Small')],
         ];
     }
 
     /**
      * Get options in "key-value" format.
      *
-     * @return array
+     * @return mixed[]
      */
-    public function toArray()
+    public function toArray(): array
     {
         return [
-            'small' => __('Small'),
             'large' => __('Large'),
+            'small' => __('Small'),
         ];
     }
 }

@@ -1,0 +1,14 @@
+parameters:
+    level: 8
+    phpVersion: 80100
+    reportUnmatchedIgnoredErrors: false
+    paths:
+        - .
+    excludePaths:
+        - 'vendor/*'
+    ignoreErrors:
+        -
+            identifier: missingType.iterableValue
+
+includes:
+    - %currentWorkingDirectory%/vendor/augustash/magento2-quality-suite-phpstan/extension.neon

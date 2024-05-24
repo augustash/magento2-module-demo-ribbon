@@ -1,0 +1,6 @@
+/.idea
+/composer.lock
+/phpcs.xml
+/phpmd.xml
+/phpstan.neon
+/vendor

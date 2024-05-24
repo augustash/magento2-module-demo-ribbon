@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vendor/squizlabs/php_codesniffer/phpcs.xsd">
+    <arg name="basepath" value="."/>
+    <arg name="colors"/>
+    <arg name="encoding" value="utf-8"/>
+    <arg name="extensions" value="php,phtml"/>
+    <!-- show the run progress -->
+    <arg value="p"/>
+    <!-- show sniff codes in all reports -->
+    <arg value="s"/>
+    <!-- PHP version checked during run -->
+    <config name="php_version" value="80100"/>
+    <!-- include module's code directory -->
+    <file>.</file>
+    <exclude-pattern>src/*.less</exclude-pattern>
+    <exclude-pattern>vendor/*</exclude-pattern>
+    <!-- specify the ruleset -->
+    <rule ref="AugustAsh"/>
+</ruleset>
