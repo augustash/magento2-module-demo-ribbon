@@ -17,7 +17,7 @@ use Magento\Framework\View\Element\Template;
 /** @var Escaper $escaper */
 /** @var RibbonNotice $viewModel */
 
-$viewModel = $block->getData('viewModel');
+$viewModel = $block->getData('view_model');
 $classes = \sprintf(
     '%s %s',
     $viewModel->getDemoLocation(),
@@ -25,7 +25,7 @@ $classes = \sprintf(
 );
 ?>
 <?php if ($viewModel->displayDemoNotice()): ?>
-    <div class="message global demo-ribbon">
+    <div class="demo-ribbon">
         <a href="/"
            class='ribbon <?= $escaper->escapeHtmlAttr($classes) ?>'>
            <?= $escaper->escapeHtml($viewModel->getDemoMessage()) ?>
