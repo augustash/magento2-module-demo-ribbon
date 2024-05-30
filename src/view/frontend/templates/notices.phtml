@@ -25,7 +25,7 @@ $classes = \sprintf(
 );
 ?>
 <?php if ($viewModel->displayDemoNotice()): ?>
-    <div class="message global demo-ribbon">
+    <div class="demo-ribbon">
         <a href="/"
            class='ribbon <?= $escaper->escapeHtmlAttr($classes) ?>'>
            <?= $escaper->escapeHtml($viewModel->getDemoMessage()) ?>
