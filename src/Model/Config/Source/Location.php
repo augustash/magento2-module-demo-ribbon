@@ -40,8 +40,8 @@ class Location implements OptionSourceInterface
         return [
             'bottom-left' => __('Bottom Left'),
             'bottom-right' => __('Bottom Right'),
-            'left' => __('Left'),
-            'right' => __('Right'),
+            'left' => __('Top Left'),
+            'right' => __('Top Right'),
         ];
     }
 }
